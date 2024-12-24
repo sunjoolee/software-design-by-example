@@ -25,7 +25,6 @@
 
 ---
 
-## 스터디 인원
 
 ## 📌 팀원소개
 
@@ -36,7 +35,6 @@
 |                                                       [hyun2](https://github.com/hyun2)                                                       |                                                                         [Kimkyungmin123](https://github.com/Kimkyungmin123)                                                                         |                                                       [hoseokna](https://github.com/hoseokna)                                                       |  [eunjeong90](https://github.com/eunjeong90)  |
 | :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------:  | :---------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------: |
 | [<img src="https://github.com/dhyun2.png" alt="img" height="150px" width="150px" />](https://github.com/hyun2) | [<img src="https://github.com/Kimkyungmin123.png" alt="img" height="150px" width="150px" />](https://github.com/Kimkyungmin123) | [<img src="https://github.com/hoseokna.png" alt="img" height="150px" width="150px" />](https://github.com/hoseokna) | [<img src="https://github.com/eunjeong90.png" alt="img" height="150px" width="150px" />](https://github.com/eunjeong90) |
-
 
 
 
