@@ -28,7 +28,7 @@
 
 - 각 챕터에 자신의 이름 폴더를 제작, 해당 폴더에 다양한 방법으로 학습 공유
 - 해당 작업분 PR 및 리뷰 진행(같은 조원 추가)
-- [🚨 스터디 컨벤션 안내]()
+- [🚨 스터디 컨벤션 안내](https://github.com/dev-bookclub/software-design-by-example/wiki/%F0%9F%9A%A8-%EC%8A%A4%ED%84%B0%EB%94%94-%EC%BB%A8%EB%B2%A4%EC%85%98)
 
 ---
 
