@@ -30,6 +30,8 @@
 - 해당 작업분 PR 및 리뷰 진행(같은 조원 추가)
 - [🚨 스터디 컨벤션 안내](https://github.com/dev-bookclub/software-design-by-example/wiki/%F0%9F%9A%A8-%EC%8A%A4%ED%84%B0%EB%94%94-%EC%BB%A8%EB%B2%A4%EC%85%98)
 
+- [📁 1주차 ‐ 시스템 프로그래밍 가이드](https://github.com/dev-bookclub/software-design-by-example/wiki/%F0%9F%93%81-1%EC%A3%BC%EC%B0%A8-%E2%80%90-%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D) 
+
 ---
 
 ## 📌 팀원소개
