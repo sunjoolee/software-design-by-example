@@ -1,6 +1,7 @@
-import fs from 'fs-extra'
-import glob from 'glob'
-import path from 'path'
+import fs from 'fs-extra';
+import pkg from 'glob';
+import path from 'path';
+const { glob } = pkg;
 
 /**
  * @fileoverview
