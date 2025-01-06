@@ -1,5 +1,6 @@
 import fs from 'fs-extra';
 import pkg from 'glob';
+import readline from 'readline';
 const { glob } = pkg;
 
 /**
@@ -15,6 +16,7 @@ const [srcRoot] = args
 /**
  * 특정 파일이 몇 줄인지 계산
  * @function
+ * @deprecated
  * @param {string} srcName 줄 수 셀 파일 이름
  * @param {(lineCount: number) => void} callback 파일 줄 수 계산 후, 호출될 콜백 함수
 */
@@ -34,6 +36,34 @@ const getLineCount = (srcName, callback) => {
   })
 }
 
+/**
+ * 특정 파일이 몇 줄인지 계산
+ * 스트림을 이용한 성능 개선 - 대용량 파일에 적합
+ * @function
+ * @param {string} srcName 줄 수 셀 파일 이름
+ * @param {(lineCount: number) => void} callback 파일 줄 수 계산 후, 호출될 콜백 함수
+*/
+const getBetterLineCount = (srcName, callback) => {
+  const fileStream = fs.createReadStream(srcName); // 파일 스트림 생성
+  const rl = readline.createInterface({ input: fileStream });
+
+  let lineCount = 0;
+
+  rl.on('line', () => { // 줄을 읽을 때마다 실행
+    lineCount++;
+  });
+  rl.on('close', () => { // 파일 읽기가 끝났을 때 실행
+    const splitSrcName = srcName.split('/')
+    const trimmedSrcName = splitSrcName[splitSrcName.length - 1] // 경로를 제외한 파일 이름
+
+    console.log(`${trimmedSrcName} ${lineCount}`)
+    callback(lineCount) // 콜백 함수 호출
+  });
+  rl.on('error', (error) => { // 에러 처리
+    console.error(error)
+  });
+}
+
 glob(
   `${srcRoot}/**/*.*`,
   (error, matches) => {
@@ -51,7 +81,7 @@ glob(
           return
         }
         if (stats.isFile()) {
-          getLineCount(
+          getBetterLineCount(
             match,
             (lineCount) => {
               lineCountSum += lineCount
