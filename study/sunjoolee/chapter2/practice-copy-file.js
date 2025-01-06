@@ -11,7 +11,7 @@ const { glob } = pkg;
  */
 
 const args = process.argv.slice(2)
-if (args.length !== 2) throw SyntaxError("Wrong number of arguments! Enter 2 arguments")
+if (args.length < 3) throw SyntaxError("Wrong number of arguments! Enter at least 3 arguments")
 
 const [srcRoot, dstRoot] = args
 console.log(srcRoot, dstRoot)
