@@ -1,0 +1,4 @@
+# This is .mygitignore file
+
+**/*.ts
+src/dirA/dirAA
