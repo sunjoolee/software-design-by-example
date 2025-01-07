@@ -1,7 +1,7 @@
 import pkg from 'glob';
-import myGitAdd from './add.js';
-import myGitInit from './init.js';
 import isLocalRepo from './is-local-repo.js';
+import myGitAdd from './my-git-add.js';
+import myGitInit from './my-git-init.js';
 const { glob } = pkg;
 
 /**
