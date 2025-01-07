@@ -13,5 +13,7 @@ import myGit from './src/my-git.js'
  */
 
 
-const [command, args] = process.argv.slice(2)
+const [command, ...args] = process.argv.slice(2)
+console.log("command: ", command)
+console.log("args: ", args)
 myGit(command, args)

@@ -19,7 +19,6 @@ const { glob } = pkg;
  * @example my-git add { 디렉토리/파일 목록 }
  */
 export default function myGitAdd(args) {
-  console.log(`args: `, args)
   if (args.length < 1) {
     console.error("add - Too less arguments! Enter file/directory paths to add")
     process.exit()
@@ -27,9 +26,9 @@ export default function myGitAdd(args) {
 
   _getIgnorePatterns((ignorePatterns) => {
     const distRoot = path.join(process.cwd(), MY_STAGING_AREA)
-    Array.from(args).forEach(pattern => {
+    args.forEach(pattern => {
       const srcRoot = path.join(process.cwd(), pattern)
-      copySrcToDst(srcRoot,distRoot, ignorePatterns)
+      copySrcToDst(srcRoot, distRoot, ignorePatterns)
     })
   })
 }

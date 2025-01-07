@@ -21,9 +21,17 @@ export function writeToDst(dstRoot, content) {
  * @param {string[] | undefined} ignorePatterns 무시할 Glob 패턴 목록
  */
 export function copySrcToDst(srcRoot, dstRoot, ignorePatterns) {
-  glob(`${srcRoot}/**/*.*`, { ignore: ignorePatterns }, (error, matches) => {
+  const isFile = srcRoot.split('.').length > 1
+  const globPattern =  isFile ? srcRoot : `${srcRoot}/**/*.*`
+  console.log(`glob pattern: `, globPattern)
+
+  glob(globPattern, { ignore: ignorePatterns }, (error, matches) => {
     if (error) {
       console.error(`Error matching pattern ${srcRoot}\n`, error)
+      return
+    }
+    if (matches.length === 0) {
+      console.error(`Cannot find matching files for ${isFile ? "file" : "directory"} ${srcRoot}`)
       return
     }
 
