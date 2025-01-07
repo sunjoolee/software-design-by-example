@@ -10,7 +10,7 @@ const { glob } = pkg;
  */
 
 /**
- * @example node example-copy-file.js srcRoot dstRoot
+ * @example node copy-file.js srcRoot dstRoot
  * - process.argv
  *   - process.argv[0] - 코드 실행에 사용되는 프로그램, node
  *   - process.argv[1] - 실행될 프로그램, example-copy-file.js
