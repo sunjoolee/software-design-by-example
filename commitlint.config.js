@@ -14,7 +14,6 @@ export default {
             'yu-ratel',
             'ksh200070',
             '5622lsk',
-            'Kimkyungmin123',
             'hoseokna',
             'eunjeong90',
             'jadugamja',
