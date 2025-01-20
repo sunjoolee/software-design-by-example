@@ -7,6 +7,9 @@
 - Node.js는 싱글 스레드 기반의 런타임 환경
   - JS 코드를 실행하는 **메인 스레드는 단일 스레드로 동작**
   - 하지만, **멀티 스레드 활용 기능 내장** -> 이벤트 루프 & 백그라운드 작업
+
+<img src="https://blog.kakaocdn.net/dn/bEeJN4/btsabeBnUWX/exb9jS9LXWWW7oM1Yk832K/img.png" width="670" height="400"/>
+
 - 콜 스택(Call Stack)
   - JS가 **동기적으로** 실행할 함수 저장 & 관리
   - 함수 호출 시, 스택에 push, 함수 실행 완료 시 스택에서 pop
